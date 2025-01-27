@@ -1051,6 +1051,7 @@ button.submit-btn:focus {
     border-radius: 2px;
 }
 
+
 .contact-wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -1060,7 +1061,6 @@ button.submit-btn:focus {
     gap: 60px;
     position: relative;
     margin-bottom: 200px;
-    /* padding-top: 200px; */
 }
 
 .contact-container {
@@ -1180,17 +1180,10 @@ button.submit-btn:focus {
 
 /* Social Links Styles */
 .social-links {
-    /* display: flex;
-    /* flex-direction: column; */
     margin-top: 150px; 
     margin-left: 100px;
-     gap: 20px;
-    /* padding: 40px; */
-    /* background: rgba(255, 255, 255, 0.05);
-    border-radius: 20px; */ 
-    /* backdrop-filter: blur(10px); */
-    /* border: 1px solid rgba(255, 255, 255, 0.1);
-    min-width: 300px; */
+    gap: 20px;
+   
 }
 
 .social-icon {
