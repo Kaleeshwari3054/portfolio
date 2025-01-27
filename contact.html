@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-wrapper">
+            <div class="contact-container">
+                <p class="contact-p">If you have any questions or would like to get in touch, feel free to send me a message!</p>
+                <form id="contact-form" action="https://formsubmit.co/kaleeshwari894@gmail.com" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://wa.me/9841419345" target="_blank" class="social-icon" id="whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://github.com/kaleeshwari30" target="_blank" class="social-icon" id="github">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://facebook.com/yourprofile" target="_blank" class="social-icon" id="facebook">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://linkedin.com/in/kaleeshwari30" target="_blank" class="social-icon" id="linkedin">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <style>
+/* Contact Section Styles */
+#contact {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1e2337 0%, #101c34 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+#contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #f39c12, transparent);
+}
+
+#contact h2 {
+    text-align: center;
+    color: #f39c12;
+    margin-bottom: 60px;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#contact h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #f39c12;
+    border-radius: 2px;
+}
+
+.contact-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    position: relative;
+}
+
+.contact-container {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
+    transition: all 0.4s ease;
+}
+
+.contact-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.contact-p {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f39c12;
+    outline: none;
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: linear-gradient(45deg, #f39c12, #e67e22);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(45deg, #e67e22, #f39c12);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(243, 156, 18, 0.4);
+}
+
+/* Social Links Styles */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 300px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.4s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icon i {
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.social-icon span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover::before {
+    opacity: 1;
+}
+
+#whatsapp:hover {
+    background: linear-gradient(45deg, #25D366, #128C7E);
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+#github:hover {
+    background: linear-gradient(45deg, #333, #24292e);
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+#facebook:hover {
+    background: linear-gradient(45deg, #1877F2, #0d6efd);
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(24, 119, 242, 0.4);
+}
+
+#linkedin:hover {
+    background: linear-gradient(45deg, #0A66C2, #0077b5);
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(10, 102, 194, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .contact-wrapper {
+        gap: 40px;
+    }
+    
+    .social-links {
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    #contact {
+        padding: 60px 20px;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .social-links {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 30px;
+    }
+
+    .social-icon {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    #contact h2 {
+        font-size: 2.2rem;
+    }
+
+    .social-icon {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .contact-container {
+        padding: 25px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px;
+    }
+}
+    </style>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <!-- <section class = "responsive_view"> -->
+    <header>
+
+        <div class="header-container">
+            <h1 class="name">Kaleeshwari</h1>
+
+            <nav class="navigation">
+                <a href="#head">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section id="head">
+        <div class="head-content">
+            <div class="text-content">
+                <h2 class="hello">Hello, I'm <br> <span> Kaleeshwari</span></h2>
+                <h3 class="Frontend-h3">Frontend Developer</h3>
+            </div>
+
+            <div> <img src="Assets/img.jpeg" class="profile-image-1" alt="Kaleeshwari" height="450">
+
+            </div>
+        </div>
+    </section>
+    <main>
+        <section id="about">
+            <div class="info">
+                <div class="img"><img src="Assets/img.jpeg" class="profile-image-2" alt="Kaleeshwari" height="400px"
+                        width="300px">
+                </div>
+
+                <div class="info-two">
+                    <h2 class="aboutme-head">About Me</h2>
+                    <!-- <h3>why hire me for your next project?</h3> -->
+
+                    <!-- <p> Hi, I am Kaleeshwari. I am 20 years old. I am from Chennai. I am from a family of 6 members.
+                        I have three siblings and I am the youngest of them. I have completed my 12th grade at Avicii
+                        Higher Secondary School. I am currently enrolled in a one-year
+                        training program at Freshworks STS. I am being trained in english, soft skills, and coding. My
+                        short-term goal for this year is
+                        to become a software developer, and my long-term goals is to set up my own business. My hobbies
+                        are listening to music and playing games.
+                    </p> -->
+                    <p>
+                        Hello, my self Kaleeshwari and I am from Chennai. My mother's name is Muthukali. She works as an
+                        ironer and inspires me with her hard work. I completed my 12th grade at Avichi Higher Secondary
+                        School. After school, I joined Meenakshi College for a BCA degree and i have completed two years
+                        of the program and dropped out after joining the academy to focus on enhancing my technical
+                        ability. Then I joined FreshWorks Software Academy to improve my skills and learn more about
+                        technology . I have built my own portfolio website , and I am currently working on an OTT
+                        website.
+                        My hobbies include listening to music, playing indoor games, and dancing. My goal is to become a
+                        developer.
+                        <!-- I want to learn how to solve problems and create useful software. I enjoy exploring
+                        new ideas and understanding how things work in the tech world. I am working hard every day to
+                        improve my technical knowledge and problem-solving skills to achieve my goals. I believe that
+                        with focus, practice, and dedication, I can succeed in becoming a skilled developer and make a
+                        positive impact in the future. Thank you. -->
+
+                    </p>
+
+                    <a href="https://www.canva.com/design/DAGMBivGDBk/xVWrByMeZey_9s-omkio8w/edit"> <button
+                            class="read-2">Read more</button></a>
+                </div>
+            </div>
+
+        </section>
+        <section id="skills">
+            <h2 class="Skills-head">Skills</h2>
+            <div class="skills">
+                <div class="skill">
+                    <img src="images/html.png" class="programing-language-img">
+                    <h3>HTML</h3>
+                    70%
+                    <div class="progress">
+
+
+                        <div class="progress-bar" style="width: 70%;  background-color: chocolate; margin-right: 30%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="images/styles.png" class="programing-language-img">
+                    <h3>CSS</h3>
+                    65%
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 65%;  background-color: chocolate; margin-right: 35%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="./images/javascript-logo-javascript-icon-transparent-free-png (1).webp"
+                        class="programing-language-img">
+                    <h3>JAVA SCRIPT</h3>
+                    60%
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 60%;   background-color: chocolate; margin-right: 40%;">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="skill">
+                    <img src="images/my_sql-removebg-preview.png" class="programing-language-img">
+                    <h3>MY SQL</h3>
+                    52%
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 52%;  background-color: chocolate; margin-right: 48%;">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="skill">
+                    <img src="Assets/python.jpg" class="programing-language-img">
+                    <h3>PYTHON</h3>
+                    61%
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 61%; background-color: chocolate; margin-right: 39%;">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="english-skills">
+            <!-- English Skills -->
+            <h3 class="eng-heading">English Skills</h3>
+            <div class="skills-section1">
+                <div class="eng-skill">
+                    <h4>Listening</h4>
+                    <div class="stars">★★★★★</div>
+                    <p>Intermediate</p>
+                </div>
+                <div class="eng-skill">
+                    <h4>Reading</h4>
+                    <div class="stars">★★★★☆</div>
+                    <p>Intermediate</p>
+                </div>
+                <div class="eng-skill">
+                    <h4>Writing</h4>
+                    <div class="stars">★★★☆☆</div>
+                    <p class="basic">Basic</p>
+                </div>
+                <div class="eng-skill">
+                    <h4>Speaking</h4>
+                    <div class="stars">★★☆☆☆</div>
+                    <p class="basic">Basic</p>
+                </div>
+            </div>
+
+            <!-- Life Skills -->
+            <h3 class="eng-heading1">Life Skills</h3>
+            <div class="skills-section2">
+                <div class="els-skill">
+                    <h4 class="Adaptability">Adaptability & Continuous Learning</h4>
+                    <div class="stars">★★★☆☆</div>
+                </div>
+                <div class="els-skill">
+                    <h4 class="Adaptability">Self-management & Self-awareness</h4>
+                    <div class="stars">★★★☆☆</div>
+                </div>
+                <div class="els-skill">
+                    <h4 class="Adaptability">Social Skills</h4>
+                    <div class="stars">★★★☆☆</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <!-- <div class="smallcardsgrid"> -->
+            <!-- <h2><span>Client</span></h2> -->
+            <h2>My projects</h2>
+            <!-- </div> -->
+
+            <div class="box-parent1">
+                <div class="box">
+
+                    <img src="Assets/img4.png" class="imgfe" alt="project">
+                    <p>HTML</p>
+                    <p>FSSA web page </p>
+                    <a href="./Assets/sample1.html" class="read-1">Read more </a>
+                </div>
+
+                <div class="box">
+
+                    <img src="Assets/img5.png" class="imgfe" alt="project">
+                    <p>CSS</p>
+                    <p>Movie web page </p>
+                    <a href="./Assets/sample2.html" class="read-1"> Read more</a>
+                </div>
+                <!-- </div> -->
+                <!-- <div class="box-parent2"> -->
+
+                <div class="box">
+
+                    <img src="Assets/img6.jpg" class="imgfe" alt="project">
+                    <p>Life Skill</p>
+                    <p>Squad product prensentation </p>
+                    <a href="https://www.canva.com/design/DAGOxpV3N-A/AWbjVkqTPmEKJQywl3O6dg/edit" class="read-1"> Read
+                        more</a>
+                </div>
+                <div class="box">
+
+                    <img src="Assets/projectimg.png" class="imgfe" alt="project">
+                    <p>HTML and CSS and JS</p>
+                    <p>OTT website</p>
+                    <a href="https://cinimini.netlify.app/" class="read-1">Read more</a>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <div class="contact-container">
+                <p class="contact-p">If you have any questions or would like to get in touch, feel free to send me a
+                    message!</p>
+                <form id="contact-form" action="https://formsubmit.co/kaleeshwari894@gmail.com" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+            <div class="social-links">
+                <a href="https://wa.me/9841419345" target="_blank" class="social-icon" id="whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://github.com/kaleeshwari30" target="_blank" class="social-icon" id="github">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://facebook.com/yourprofile" target="_blank" class="social-icon" id="facebook">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <a href="https://linkedin.com/in/kaleeshwari30" target="_blank" class="social-icon" id="linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+
+
+
+        </section>
+    </main>
+    <!-- <footer class="footer">
+        <p>&copy; 2024 Kaleeshwari</p>
+    </footer> -->
+    <footer id="footer">
+        <!-- <div class="social-links">
+            <a href="https://wa.me/9841419345" target="_blank" class="social-icon" id="whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://github.com/kaleeshwari30" target="_blank" class="social-icon" id="github">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://facebook.com/yourprofile" target="_blank" class="social-icon" id="facebook">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="https://linkedin.com/in/kaleeshwari30" target="_blank" class="social-icon" id="linkedin">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </div> -->
+       
+    </footer>
+    
+
+    </section>
+
+</body>
+
+</html>
