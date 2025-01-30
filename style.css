@@ -290,7 +290,7 @@ body {
     padding: 10px 10px;
     text-decoration: none;
     color:white;
-    margin-left: 70px;    
+    margin-left: 100px;    
 }
 .read-2{
     text-align: center;
@@ -401,6 +401,7 @@ body {
     height: 90vh;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding-left: 150px;
+    margin-top: 100px;
 }
 
 .eng-heading {
@@ -503,6 +504,13 @@ h3 {}
 .Adaptability {
     width: 300px;
 }
+.Adaptabilitys{
+    width: 300px;
+    padding-left: 50px;
+    padding-top: 21px;
+
+
+}
 
 .els-skill,
 .eng-skill span {
@@ -516,7 +524,13 @@ h3 {}
     color: #ffcc00;
     /* Yellow stars */
 }
+.starss{
+    font-size: 15px;
+    padding-left: 10px;
+    color: #ffcc00;
+    padding-left: 80px;
 
+}
 .basic {
     padding-left: 20px;
 }
@@ -563,7 +577,7 @@ h3 {}
     border: 2px rgb(30, 35, 55) solid;
     background-color: #041e38;
     box-shadow: whitesmoke 2px 2px 5px;
-    width: 250px;
+    width: 300px;
     height: 400px;
     margin: 15px;
     border-radius: 5px;
@@ -603,7 +617,7 @@ h3 {}
 }
 
 .imgfe {
-    width: 247px;
+    width: 297px;
     height: 250px
 }
 
@@ -1037,6 +1051,18 @@ button.submit-btn:focus {
     letter-spacing: 2px;
     position: relative;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.heading1{
+    text-align: center;
+    color: #f39c12;
+    margin-bottom: 60px;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-right: 150px;
+
 }
 
 .heading::after {
